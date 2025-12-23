@@ -16,7 +16,7 @@ You can find the code examples in the `dl_d2l` package. Here is a simple example
 ```python
 from dl_d2l import d2l_torch as d2l
 
-
+d2l.arange(4)
 ```
 
 
