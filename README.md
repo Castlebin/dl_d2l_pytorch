@@ -40,6 +40,14 @@ plt.show()
 
 ```
 
+```python
+# get_available_device
+from dl_d2l import device_util
+
+device = device_util.get_available_device()
+
+print(f"Available device: {device}")
+```
 
 
 ## Build & upload to pypi (For Developers)
