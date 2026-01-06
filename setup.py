@@ -14,7 +14,7 @@ setuptools.setup(
     # 包的分发名称，使用字母、数字、_、-
     name="dl_d2l",
     # 版本号, 版本号规范：https://www.python.org/dev/peps/pep-0440/
-    version="1.0.17",
+    version="1.0.18",
     # 作者名
     author="d2l",
     # 作者邮箱
