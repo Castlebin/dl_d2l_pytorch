@@ -16,14 +16,15 @@ You can find the code examples in the `dl_d2l` package. Here is a simple example
 ```python
 from dl_d2l import d2l_torch as d2l
 
-d2l.arange(4)
+x = d2l.arange(4)
+print(x)
 ```
 
 ```python
 # enable_matplotlib_chinese
-from dl_d2l.util import enable_matplotlib_chinese
+from dl_d2l.util import matplotlib_util
 
-enable_matplotlib_chinese()
+matplotlib_util.enable_chinese()
 
 # example plot with Chinese characters
 import numpy as np
@@ -42,12 +43,45 @@ plt.show()
 
 ```python
 # get_available_device
-from dl_d2l import device_util
+from dl_d2l.util import device_util
 
 device = device_util.get_available_device()
 
 print(f"Available device: {device}")
 ```
+
+```python
+# Check if running in Google Colab
+from dl_d2l.util import colab_util
+
+if colab_util.is_colab():
+    print("Running in Google Colab")
+else:
+    print("Not running in Google Colab")
+```
+
+```python
+# Get base data directory in Google Colab or local environment
+import os
+from dl_d2l.util import colab_util
+
+base_data_dir = colab_util.get_base_data_dir()
+print(f'base data dir: {base_data_dir}')
+
+datasets_dir = os.path.join(base_data_dir, 'ML', 'Datasets')
+os.makedirs(datasets_dir, exist_ok=True)
+print(f'datasets dir: {datasets_dir}')
+```
+
+
+```python
+# flush_drive in Google Colab
+from dl_d2l.util import colab_util
+
+colab_util.flush_drive()
+print("Google Drive flushed.")
+```
+
 
 
 ## Build & upload to pypi (For Developers)

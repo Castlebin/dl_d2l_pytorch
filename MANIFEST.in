@@ -2,4 +2,5 @@ recursive-include core
 
 exclude test/*
 
-include dl_d2l/SimHei.ttf
+include dl_d2l/util/SimHei.ttf
+

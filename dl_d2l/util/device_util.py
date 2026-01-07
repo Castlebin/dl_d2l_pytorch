@@ -1,11 +1,9 @@
-import torch
+import logging
 import platform
 import subprocess
 import sys
-import logging
 
-# Configure logging
-logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+import torch
 
 
 def check_amd_gpu():
@@ -120,5 +118,3 @@ if __name__ == "__main__":
     logging.info(f"Model Input Device: {input_data.device}")
     logging.info(f"Model Parameter Device: {next(model.parameters()).device}")
     logging.info(f"Output Shape: {output.shape}")
-
-
