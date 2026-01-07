@@ -6,7 +6,7 @@ It provides code examples, tutorials, and exercises to help you learn deep learn
 ## Installation
 
 ```
-pip install -U dl_d2l
+pip install dl_d2l
 ```
 
 ## Code Examples
